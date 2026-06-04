@@ -37,3 +37,9 @@ Please keep these guidelines in mind:
 - `mdzip-mark-open` - open-folder mark.
 - `mdzip-mark-square` - square-framed primary mark.
 - `mdzip-mark-open-square` - square-framed open-folder mark.
+
+## License
+
+The MDZip Mark is dedicated to the public domain under [CC0 1.0 Universal](LICENSE).
+
+CC0 covers copyright in these assets. It does not grant trademark rights in the MDZip name or branding.
