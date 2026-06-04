@@ -1,6 +1,6 @@
 # The MDZip Mark
 
-![MDZip Mark](png/mdzip-mark-square-96.png)        ![MDZip Mark](png/mdzip-mark-open-square-96.png)
+![MDZip Mark](png/mdzip-mark-square-96.png) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ![MDZip Mark](png/mdzip-mark-open-square-96.png)
 
 Use this mark to identify MDZip (.mdz) files, tools, and integrations.
 
