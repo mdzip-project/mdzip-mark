@@ -1,6 +1,7 @@
 # The MDZip Mark
 
-![MDZip Mark](png/mdzip-mark-square-96.png) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ![MDZip Mark](png/mdzip-mark-open-square-96.png)
+![MDZip Mark variants: closed and open, in light and dark](media/mdzip-mark-variants.png)
+
 
 Use this mark to identify MDZip (.mdz) files, tools, and integrations.
 
@@ -23,12 +24,15 @@ Please keep these guidelines in mind:
 1. Maintain the original proportions of the folder, Markdown glyph, and arrow.
 2. Prefer the supplied SVG, PNG, or ICO assets instead of redrawing the mark.
 3. Use the square variants when a fixed-size app or file icon is needed.
+4. Copy the assets into your own project rather than linking to them here. File names and folder layout may change, and raw GitHub URLs are rate-limited and not meant for hot-linking.
 
 ## Files
 
 - `svg/` - editable SVG source files.
-- `png/` - PNG exports at common icon sizes.
+- `png/` - PNG exports. Non-square exports are indexed by height: `mdzip-mark-h<height>-<width>x<height>.png` (e.g. `mdzip-mark-h096-127x96.png`). The closed and open marks are rendered at the same set of heights, so a given `h<height>` always has a matching pair of equal height. Square exports use `mdzip-mark-square-<size>.png`.
 - `ico/` - Windows icon exports.
+- `*/dark/` - dark-mode (inverted) assets, mirrored inside each format folder.
+- `media/` - composite images for documentation (not distributable marks).
 - `reference/` - reference artwork used while designing the mark.
 
 ## Variants
@@ -37,6 +41,8 @@ Please keep these guidelines in mind:
 - `mdzip-mark-open` - open-folder mark.
 - `mdzip-mark-square` - square-framed primary mark.
 - `mdzip-mark-open-square` - square-framed open-folder mark.
+
+Each variant also ships a dark-mode version with black and white inverted, for use on dark backgrounds. Dark assets live in a `dark/` subfolder within each format directory and carry a `-dark` suffix (e.g. `svg/dark/mdzip-mark-dark.svg`), so a file stays self-describing even after it is copied out of this repo.
 
 ## License
 
