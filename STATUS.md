@@ -1,5 +1,5 @@
-Status: idle
-Last: (no recorded activity)
+Status: ready-to-commit
+Last: Added font/ — mdzip-icons.woff (closed mark, open mark, Markdown mark as icon-font glyphs) plus its build script
 
 Version: 0.0.0
 

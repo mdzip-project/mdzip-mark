@@ -34,6 +34,21 @@ Please keep these guidelines in mind:
 - `*/dark/` - dark-mode (inverted) assets, mirrored inside each format folder.
 - `media/` - composite images for documentation (not distributable marks).
 - `reference/` - reference artwork used while designing the mark.
+- `font/` - `mdzip-icons.woff`, an icon font holding the marks as single-colour glyphs, for UI that can only show text and font icons (e.g. a VS Code status bar via `contributes.icons`). See below.
+
+## Icon font
+
+`font/mdzip-icons.woff` has three glyphs, at stable Private Use Area codepoints (also in `font/mdzip-icons.json`):
+
+| Glyph | Codepoint | Source |
+| --- | --- | --- |
+| `mdzip-logo` | `U+E900` | `svg/mdzip-mark.svg` (closed folder) |
+| `mdzip-logo-open` | `U+E901` | `svg/mdzip-mark-open.svg` (open folder) |
+| `mdzip-markdown` | `U+E902` | the plain Markdown mark (`font/src/markdown-mark.svg`), for `.md` files |
+
+A font can only hold filled single-colour outlines, so these are **traced from the SVG marks** (rasterized, then vector-traced), not the SVGs themselves. They are close to, not identical to, the artwork; use `svg/` anywhere you can show an image. There is no dark variant: the glyph takes the text colour. Each glyph is 0.8em tall, wider than 1em (it keeps the mark's proportions), raised slightly so it centres on the middle of digits and capitals in a VS Code status bar (tuned by eye against a screenshot; other hosts may want it nudged), and has a little empty advance on its right so a following label doesn't touch it. The knobs are `LIFT` and `RIGHT_BEARING` at the top of `font/build.mjs`.
+
+To rebuild after changing a mark: `cd font && npm install && npm run build`. The traced outlines land in `font/src/*.svg` so changes are reviewable. As with the other formats, copy the `.woff` into your project rather than linking to it here.
 
 ## Variants
 

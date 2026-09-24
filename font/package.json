@@ -1,0 +1,16 @@
+{
+  "name": "mdzip-mark-font",
+  "private": true,
+  "description": "Builds mdzip-icons.woff (the MDZip and Markdown marks as icon-font glyphs) from ../svg.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "potrace": "^2.1.8",
+    "svg2ttf": "^6.0.3",
+    "svgicons2svgfont": "^15.0.1",
+    "ttf2woff": "^3.0.0"
+  }
+}
