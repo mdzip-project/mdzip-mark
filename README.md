@@ -30,9 +30,13 @@ Please keep these guidelines in mind:
 
 - `svg/` - editable SVG source files.
 - `png/` - PNG exports. Non-square exports are indexed by height: `mdzip-mark-h<height>-<width>x<height>.png` (e.g. `mdzip-mark-h096-127x96.png`). The closed and open marks are rendered at the same set of heights, so a given `h<height>` always has a matching pair of equal height. Square exports use `mdzip-mark-square-<size>.png`.
+  - `mdzip-mark-macos-<size>.png` (16-1024) - macOS app icon: the mark on a white rounded-square tile following the Apple icon grid (824px tile on a 1024px canvas, soft shadow), from `svg/mdzip-mark-macos.svg`. The 16 and 32 renders use `svg/mdzip-mark-macos-small.svg`, which drops the shadow for a cleaner edge. Use them to build an `.icns`.
+  - `mdzip-mark-ios-1024.png` and `mdzip-mark-ios-dark-1024.png` (1024) - iOS app icon: light (opaque white, full-bleed; iOS rounds the corners) and dark (light mark on transparent), from `svg/mdzip-mark-ios.svg` and `svg/mdzip-mark-ios-dark.svg`. Use them for an Xcode asset catalog's Any and Dark appearances. Tinted is not provided.
 - `ico/` - Windows icon exports.
 - `*/dark/` - dark-mode (inverted) assets, mirrored inside each format folder.
-- `media/` - composite images for documentation (not distributable marks).
+- `media/` - composite images for documentation (not distributable marks), plus profile pictures:
+  - `mdzip-mark-avatar-circle.png` (1200×1200) - for sites that crop avatars to a circle (AlternativeTo, GitHub, Reddit, Discord, Bluesky). The whole mark fits inside the circle.
+  - `mdzip-mark-avatar.png` (1000×1000) - for sites that show the avatar square. Its corners are cut off in a circle crop.
 - `reference/` - reference artwork used while designing the mark.
 - `font/` - `mdzip-icons.woff`, an icon font holding the marks as single-colour glyphs, for UI that can only show text and font icons (e.g. a VS Code status bar via `contributes.icons`). See below.
 
